@@ -19,6 +19,77 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
 
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            /* Fixed positioning to place it relative to the viewport */
+            right: 20px;
+            /* 20px from the right */
+            bottom: 40px;
+            /* 20px from the bottom */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #25D366; */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            /* Make it round */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            /* box-shadow: 2px 2px 5px rgba(0,0,0,0.3); Optional: add some shadow for better visibility */
+            z-index: 1000;
+            /* Make sure it's above other items */
+        }
+
+        .whatsapp-icon {
+            height: 64px;
+            /* Icon size */
+            margin-right: 0px;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1001;
+            bottom: 50px;
+            right: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+
+            /* Fade in tooltip - animation */
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .whatsapp-button-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Add media query for better mobile responsiveness */
+        @media (max-width: 480px) {
+            .whatsapp-button {
+                right: 10px;
+                bottom: 10px;
+                padding: 8px;
+                font-size: 0.9em;
+                /* Smaller text on mobile */
+            }
+
+            .whatsapp-icon {
+                height: 50px;
+                /* Smaller icon on mobile */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -48,29 +119,29 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="index.html">Home</a>
-                                        <ul>
+                                        <!-- <ul>
                                             <li><a class="menu-item" href="index.html">Homepage One</a></li>
                                             <li><a class="menu-item" href="homepage-2.html">Homepage Two</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>                                    
-                                    <li><a class="menu-item" href="#">Study Case</a>
-                                        <ul>
+                                    <li><a class="menu-item" href="study-case.html">Study Case</a>
+                                        <!-- <ul>
                                             <li><a class="menu-item" href="study-case.html">Study Case</a></li>
                                             <li><a class="menu-item" href="study-case-single.html">Single Study Case</a></li>
-                                        </ul>
-                                    </li>                                   
+                                        </ul> -->
+                                    </li>                                  
                                     <li><a class="menu-item" href="services.html">Services</a></li>
                                     <li><a class="menu-item" href="about.html">About Us</a></li>
                                     <li><a class="menu-item" href="news.html">News</a></li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                    <!-- <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </div>
                             <div class="de-flex-col">
-                                <div class="menu_side_area" style="background-color: green;">
+                                <div class="menu_side_area">
                                     <!-- <div class="h-phone md-hide">
                                         <span>Need Help?</span>+62 831-4826-3597
                                     </div>                                     -->                                   
-                                    <a href="https://wa.me/6283148263597" class="btn-line">Whatsapp us</a>
+                                    <a href="contact.html" class="btn-line">Contact us</a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
@@ -497,18 +568,18 @@
             <div class="container">
                 <div class="row gx-5">
                     <div class="col-lg-4 col-sm-6">
-                        <img width="170" height="50" src="images/kukode-white-logo.png" alt="" >
+                        <img width="170" height="40" src="images/kukode-white-logo.png" alt="" >
                         <div class="spacer-20"></div>
                         <p>We aspire to create a digital landscape where technology seamlessly enhances productivity, connectivity, and sustainability, fostering a brighter, more efficient, and inclusive future for all.</p>
 
                         <div class="widget">
                             <h5>Follow Us on</h5>
                             <div class="social-icons">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-discord"></i></a>
-                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://www.facebook.com/kukodein/"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/kukodein"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://discord.com/channels/kukode"><i class="fa-brands fa-discord"></i></a>
+                                <a href="https://www.tiktok.com/@kukodein"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.youtube.com/channel/UC-sqh84XZ6TO26T_S_B2S0g"><i class="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -565,7 +636,7 @@
                                 <img src="images/svg/map-pin-svgrepo-com-white.svg" class="" alt="">
                                 <div class="d-text">
                                     <h4>Address</h4>
-                                    100 S Main St, Los Angeles, CA
+                                    Jl. Tirta Marta 1-72, Mlati,Yogyakarta
                                 </div>
                             </div>
                         </div>
@@ -578,7 +649,7 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    Copyright 2023 - KuKode by Designesia
+                                    Copyright 2023 - Develop by KuKode
                                 </div>
                                 <ul class="menu-simple">
                                     <li><a href="#">Terms &amp; Conditions</a></li>
@@ -591,6 +662,9 @@
             </div>
         </footer>
         <!-- footer close -->
+        <a href="https://wa.me/6283148263597" class="whatsapp-button" title="Chat with us on WhatsApp">
+            <img src="images/wa-white.png" class="whatsapp-icon" alt="WhatsApp icon">
+        </a>
     </div>
     
     <!-- Javascript Files

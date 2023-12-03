@@ -5,20 +5,91 @@
     <title>KuKode — IT Solutions and Digital Services</title>
     <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="KuKode — IT Solutions and Digital Services" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="KuKode — IT Solutions and Digital Services" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
     <!-- CSS Files
     ================================================== -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/plugins.css" rel="stylesheet" type="text/css" >
-    <link href="css/swiper.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
-    <link href="css/coloring.css" rel="stylesheet" type="text/css" >
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            /* Fixed positioning to place it relative to the viewport */
+            right: 20px;
+            /* 20px from the right */
+            bottom: 40px;
+            /* 20px from the bottom */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #25D366; */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            /* Make it round */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            /* box-shadow: 2px 2px 5px rgba(0,0,0,0.3); Optional: add some shadow for better visibility */
+            z-index: 1000;
+            /* Make sure it's above other items */
+        }
+
+        .whatsapp-icon {
+            height: 64px;
+            /* Icon size */
+            margin-right: 0px;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1001;
+            bottom: 50px;
+            right: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+
+            /* Fade in tooltip - animation */
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .whatsapp-button-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Add media query for better mobile responsiveness */
+        @media (max-width: 480px) {
+            .whatsapp-button {
+                right: 10px;
+                bottom: 10px;
+                padding: 8px;
+                font-size: 0.9em;
+                /* Smaller text on mobile */
+            }
+
+            .whatsapp-icon {
+                height: 50px;
+                /* Smaller icon on mobile */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,8 +109,9 @@
                                     <!-- logo begin -->
                                     <div id="logo">
                                         <a href="index.html">
-                                            <img class="logo-main" width="120" height="30"src="images/kukode-white-logo.png" alt="">
-                                            <img class="logo-mobile" src="images/logo-mobile.png" alt="" >
+                                            <img class="logo-main" width="120" height="30"
+                                                src="images/kukode-white-logo.png" alt="">
+                                            <img class="logo-mobile" src="images/logo-mobile.png" alt="">
                                         </a>
                                     </div>
                                     <!-- logo close -->
@@ -48,29 +120,29 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="index.html">Home</a>
-                                        <ul>
+                                        <!-- <ul>
                                             <li><a class="menu-item" href="index.html">Homepage One</a></li>
                                             <li><a class="menu-item" href="homepage-2.html">Homepage Two</a></li>
-                                        </ul>
-                                    </li>                                    
-                                    <li><a class="menu-item" href="#">Study Case</a>
-                                        <ul>
+                                        </ul> -->
+                                    </li>
+                                    <li><a class="menu-item" href="study-case.html">Study Case</a>
+                                        <!-- <ul>
                                             <li><a class="menu-item" href="study-case.html">Study Case</a></li>
                                             <li><a class="menu-item" href="study-case-single.html">Single Study Case</a></li>
-                                        </ul>
-                                    </li>                                   
+                                        </ul> -->
+                                    </li>
                                     <li><a class="menu-item" href="services.html">Services</a></li>
                                     <li><a class="menu-item" href="about.html">About Us</a></li>
                                     <li><a class="menu-item" href="news.html">News</a></li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                    <!-- <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </div>
                             <div class="de-flex-col">
-                                <div class="menu_side_area" style="background-color: green;">
+                                <div class="menu_side_area">
                                     <!-- <div class="h-phone md-hide">
                                         <span>Need Help?</span>+62 831-4826-3597
-                                    </div>                                     -->                                   
-                                    <a href="https://wa.me/6283148263597" class="btn-line">Whatsapp us</a>
+                                    </div>                                     -->
+                                    <a href="contact.html" class="btn-line">Contact us</a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
@@ -94,7 +166,7 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li class="active">News</li>
                             </ul>
-                        </div>                 
+                        </div>
                     </div>
                 </div>
             </section>
@@ -105,119 +177,125 @@
                     <div class="row g-4">
                         <div class="col-lg-4 col-md-6 mb10">
                             <div class="bloglist item">
-                                    <div class="post-content">
-                                        <div class="post-image">
-                                            <div class="d-tagline">
-                                                <span>tech</span>
-                                                <span>daily</span>
-                                            </div>
-                                            <img alt="" src="images/news/1.webp" class="lazy">
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div class="d-tagline">
+                                            <span>tech</span>
+                                            <span>daily</span>
                                         </div>
-                                        <div class="post-text">
-                                            <div class="d-date">2 days ago</div>
-                                            <h4><a href="news-single.html">A Glimpse into the Future of Technology</a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                        </div>
+                                        <img alt="" src="images/news/1.webp" class="lazy">
+                                    </div>
+                                    <div class="post-text">
+                                        <div class="d-date">2 days ago</div>
+                                        <h4><a href="news-single.html">A Glimpse into the Future of Technology</a></h4>
+                                        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim
+                                            reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-md-6 mb10">
                             <div class="bloglist item">
-                                    <div class="post-content">
-                                        <div class="post-image">
-                                            <div class="d-tagline">
-                                                <span>tech</span>
-                                                <span>daily</span>
-                                            </div>
-                                            <img alt="" src="images/news/2.webp" class="lazy">
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div class="d-tagline">
+                                            <span>tech</span>
+                                            <span>daily</span>
                                         </div>
-                                        <div class="post-text">
-                                            <div class="d-date">2 days ago</div>
-                                            <h4><a href="news-single.html">How AI is Transforming Industries</a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                        </div>
+                                        <img alt="" src="images/news/2.webp" class="lazy">
+                                    </div>
+                                    <div class="post-text">
+                                        <div class="d-date">2 days ago</div>
+                                        <h4><a href="news-single.html">How AI is Transforming Industries</a></h4>
+                                        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim
+                                            reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-md-6 mb10">
                             <div class="bloglist item">
-                                    <div class="post-content">
-                                        <div class="post-image">
-                                            <div class="d-tagline">
-                                                <span>tech</span>
-                                                <span>daily</span>
-                                            </div>
-                                            <img alt="" src="images/news/3.webp" class="lazy">
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div class="d-tagline">
+                                            <span>tech</span>
+                                            <span>daily</span>
                                         </div>
-                                        <div class="post-text">
-                                            <div class="d-date">2 days ago</div>
-                                            <h4><a href="news-single.html">How Technology is Reshaping Our Lives</a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                        </div>
+                                        <img alt="" src="images/news/3.webp" class="lazy">
+                                    </div>
+                                    <div class="post-text">
+                                        <div class="d-date">2 days ago</div>
+                                        <h4><a href="news-single.html">How Technology is Reshaping Our Lives</a></h4>
+                                        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim
+                                            reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-md-6 mb10">
                             <div class="bloglist item">
-                                    <div class="post-content">
-                                        <div class="post-image">
-                                            <div class="d-tagline">
-                                                <span>tech</span>
-                                                <span>daily</span>
-                                            </div>
-                                            <img alt="" src="images/news/4.webp" class="lazy">
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div class="d-tagline">
+                                            <span>tech</span>
+                                            <span>daily</span>
                                         </div>
-                                        <div class="post-text">
-                                            <div class="d-date">2 days ago</div>
-                                            <h4><a href="news-single.html">Cybersecurity in the Digital Age</a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                        </div>
+                                        <img alt="" src="images/news/4.webp" class="lazy">
+                                    </div>
+                                    <div class="post-text">
+                                        <div class="d-date">2 days ago</div>
+                                        <h4><a href="news-single.html">Cybersecurity in the Digital Age</a></h4>
+                                        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim
+                                            reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        
-                        <div class="col-lg-4 col-md-6 mb10">
-                        <div class="bloglist item">
-                                    <div class="post-content">
-                                        <div class="post-image">
-                                            <div class="d-tagline">
-                                                <span>tech</span>
-                                                <span>daily</span>
-                                            </div>
-                                            <img alt="" src="images/news/5.webp" class="lazy">
-                                        </div>
-                                        <div class="post-text">
-                                            <div class="d-date">2 days ago</div>
-                                            <h4><a href="news-single.html">Balancing Progress and Responsibility</a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        
+
                         <div class="col-lg-4 col-md-6 mb10">
                             <div class="bloglist item">
-                                    <div class="post-content">
-                                        <div class="post-image">
-                                            <div class="d-tagline">
-                                                <span>tech</span>
-                                                <span>daily</span>
-                                            </div>
-                                            <img alt="" src="images/news/6.webp" class="lazy">
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div class="d-tagline">
+                                            <span>tech</span>
+                                            <span>daily</span>
                                         </div>
-                                        <div class="post-text">
-                                            <div class="d-date">2 days ago</div>
-                                            <h4><a href="news-single.html">The Next Generation for the Digital Age</a></h4>
-                                            <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                        </div>
+                                        <img alt="" src="images/news/5.webp" class="lazy">
+                                    </div>
+                                    <div class="post-text">
+                                        <div class="d-date">2 days ago</div>
+                                        <h4><a href="news-single.html">Balancing Progress and Responsibility</a></h4>
+                                        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim
+                                            reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        
-                        
+
+                        <div class="col-lg-4 col-md-6 mb10">
+                            <div class="bloglist item">
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div class="d-tagline">
+                                            <span>tech</span>
+                                            <span>daily</span>
+                                        </div>
+                                        <img alt="" src="images/news/6.webp" class="lazy">
+                                    </div>
+                                    <div class="post-text">
+                                        <div class="d-date">2 days ago</div>
+                                        <h4><a href="news-single.html">The Next Generation for the Digital Age</a></h4>
+                                        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim
+                                            reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </section>
@@ -228,18 +306,20 @@
             <div class="container">
                 <div class="row gx-5">
                     <div class="col-lg-4 col-sm-6">
-                        <img width="170" height="50" src="images/kukode-white-logo.png" alt="" >
+                        <img width="170" height="40" src="images/kukode-white-logo.png" alt="">
                         <div class="spacer-20"></div>
-                        <p>We aspire to create a digital landscape where technology seamlessly enhances productivity, connectivity, and sustainability, fostering a brighter, more efficient, and inclusive future for all.</p>
+                        <p>We aspire to create a digital landscape where technology seamlessly enhances productivity,
+                            connectivity, and sustainability, fostering a brighter, more efficient, and inclusive future
+                            for all.</p>
 
                         <div class="widget">
                             <h5>Follow Us on</h5>
                             <div class="social-icons">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-discord"></i></a>
-                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/kukodein/"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/kukodein"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://discord.com/channels/kukode"><i class="fa-brands fa-discord"></i></a>
+                                <a href="https://www.tiktok.com/@kukodein"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.youtube.com/channel/UC-sqh84XZ6TO26T_S_B2S0g"><i class="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -248,7 +328,7 @@
                             <div class="col-lg-6 col-sm-6">
                                 <div class="widget">
                                     <h5>Company</h5>
-                                    <ul>                                        
+                                    <ul>
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="services.html">Our Services</a></li>
                                         <li><a href="study-case.html">Study Case</a></li>
@@ -296,7 +376,7 @@
                                 <img src="images/svg/map-pin-svgrepo-com-white.svg" class="" alt="">
                                 <div class="d-text">
                                     <h4>Address</h4>
-                                    100 S Main St, Los Angeles, CA
+                                    Jl. Tirta Marta 1-72, Mlati,Yogyakarta
                                 </div>
                             </div>
                         </div>
@@ -309,7 +389,7 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    Copyright 2023 - KuKode by Designesia
+                                    Copyright 2023 - Develop by KuKode
                                 </div>
                                 <ul class="menu-simple">
                                     <li><a href="#">Terms &amp; Conditions</a></li>
@@ -322,8 +402,11 @@
             </div>
         </footer>
         <!-- footer close -->
+        <a href="https://wa.me/6283148263597" class="whatsapp-button" title="Chat with us on WhatsApp">
+            <img src="images/wa-white.png" class="whatsapp-icon" alt="WhatsApp icon">
+        </a>
     </div>
-    
+
     <!-- Javascript Files
     ================================================== -->
     <script src="js/plugins.js"></script>

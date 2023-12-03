@@ -1,3 +1,3 @@
 jQuery(function($){
-    $( '.g-recaptcha' ).attr( 'data-theme', 'dark' );
+    $( '.g-recaptcha' ).attr( 'data-theme', 'light' );
 });

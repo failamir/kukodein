@@ -5,20 +5,91 @@
     <title>KuKode — IT Solutions and Digital Services</title>
     <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="KuKode — IT Solutions and Digital Services" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="KuKode — IT Solutions and Digital Services" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
     <!-- CSS Files
     ================================================== -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/plugins.css" rel="stylesheet" type="text/css" >
-    <link href="css/swiper.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
-    <link href="css/coloring.css" rel="stylesheet" type="text/css" >
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            /* Fixed positioning to place it relative to the viewport */
+            right: 20px;
+            /* 20px from the right */
+            bottom: 40px;
+            /* 20px from the bottom */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #25D366; */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            /* Make it round */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            /* box-shadow: 2px 2px 5px rgba(0,0,0,0.3); Optional: add some shadow for better visibility */
+            z-index: 1000;
+            /* Make sure it's above other items */
+        }
+
+        .whatsapp-icon {
+            height: 64px;
+            /* Icon size */
+            margin-right: 0px;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1001;
+            bottom: 50px;
+            right: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+
+            /* Fade in tooltip - animation */
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .whatsapp-button-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Add media query for better mobile responsiveness */
+        @media (max-width: 480px) {
+            .whatsapp-button {
+                right: 10px;
+                bottom: 10px;
+                padding: 8px;
+                font-size: 0.9em;
+                /* Smaller text on mobile */
+            }
+
+            .whatsapp-icon {
+                height: 50px;
+                /* Smaller icon on mobile */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,8 +109,9 @@
                                     <!-- logo begin -->
                                     <div id="logo">
                                         <a href="index.html">
-                                            <img class="logo-main" width="120" height="30"src="images/kukode-white-logo.png" alt="">
-                                            <img class="logo-mobile" src="images/logo-mobile.png" alt="" >
+                                            <img class="logo-main" width="120" height="30"
+                                                src="images/kukode-white-logo.png" alt="">
+                                            <img class="logo-mobile" src="images/logo-mobile.png" alt="">
                                         </a>
                                     </div>
                                     <!-- logo close -->
@@ -48,29 +120,29 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="index.html">Home</a>
-                                        <ul>
+                                        <!-- <ul>
                                             <li><a class="menu-item" href="index.html">Homepage One</a></li>
                                             <li><a class="menu-item" href="homepage-2.html">Homepage Two</a></li>
-                                        </ul>
-                                    </li>                                    
-                                    <li><a class="menu-item" href="#">Study Case</a>
-                                        <ul>
+                                        </ul> -->
+                                    </li>
+                                    <li><a class="menu-item" href="study-case.html">Study Case</a>
+                                        <!-- <ul>
                                             <li><a class="menu-item" href="study-case.html">Study Case</a></li>
                                             <li><a class="menu-item" href="study-case-single.html">Single Study Case</a></li>
-                                        </ul>
-                                    </li>                                   
+                                        </ul> -->
+                                    </li>
                                     <li><a class="menu-item" href="services.html">Services</a></li>
                                     <li><a class="menu-item" href="about.html">About Us</a></li>
                                     <li><a class="menu-item" href="news.html">News</a></li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                    <!-- <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </div>
                             <div class="de-flex-col">
-                                <div class="menu_side_area" style="background-color: green;">
+                                <div class="menu_side_area">
                                     <!-- <div class="h-phone md-hide">
                                         <span>Need Help?</span>+62 831-4826-3597
-                                    </div>                                     -->                                   
-                                    <a href="https://wa.me/6283148263597" class="btn-line">Whatsapp us</a>
+                                    </div>                                     -->
+                                    <a href="contact.html" class="btn-line">Contact us</a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
@@ -89,7 +161,8 @@
                     <div class="row gx-5 align-items-center">
                         <div class="col-lg-6">
                             <div class="subtitle s2 wow fadeInUp mb-3">Latest News</div>
-                            <h2 class="wow fadeInUp mb20" data-wow-delay=".2s">A Glimpse into the Future of Technology</h2>
+                            <h2 class="wow fadeInUp mb20" data-wow-delay=".2s">A Glimpse into the Future of Technology
+                            </h2>
                             <ul class="crumb">
                                 <li><a href="index.html">Home</a></li>
                                 <li class="active">News</li>
@@ -99,7 +172,7 @@
 
                         <div class="col-lg-6">
                             <img src="images/news/1.webp" class="img-fluid rounded-30" alt="">
-                        </div>                 
+                        </div>
                     </div>
                 </div>
             </section>
@@ -111,11 +184,26 @@
                             <div class="blog-read">
 
                                 <div class="post-text">
-                                    <p>Quis sunt quis do laboris eiusmod in sint dolore sit pariatur consequat commodo aliqua nulla ad dolor aliquip incididunt voluptate est aliquip adipisicing ea cupidatat nostrud incididunt aliquip dolore. Sed minim nisi duis laborum est labore nisi amet elit adipisicing proident do consectetur dolor labore sit nisi ad proident esse ad velit nisi irure reprehenderit ut et dolor labore veniam quis.</p>
+                                    <p>Quis sunt quis do laboris eiusmod in sint dolore sit pariatur consequat commodo
+                                        aliqua nulla ad dolor aliquip incididunt voluptate est aliquip adipisicing ea
+                                        cupidatat nostrud incididunt aliquip dolore. Sed minim nisi duis laborum est
+                                        labore nisi amet elit adipisicing proident do consectetur dolor labore sit nisi
+                                        ad proident esse ad velit nisi irure reprehenderit ut et dolor labore veniam
+                                        quis.</p>
 
-                                    <p>Sunt duis laboris ex et quis laborum laborum cillum mollit voluptate culpa consequat ex cupidatat dolor eiusmod proident proident cillum pariatur sint adipisicing in nostrud do dolore consectetur quis incididunt minim consectetur. Exercitation elit proident dolor est id eiusmod dolor dolor incididunt ad voluptate laboris cupidatat est est sint veniam sint officia sint incididunt est sit ut tempor commodo pariatur ut proident et do.</p>
+                                    <p>Sunt duis laboris ex et quis laborum laborum cillum mollit voluptate culpa
+                                        consequat ex cupidatat dolor eiusmod proident proident cillum pariatur sint
+                                        adipisicing in nostrud do dolore consectetur quis incididunt minim consectetur.
+                                        Exercitation elit proident dolor est id eiusmod dolor dolor incididunt ad
+                                        voluptate laboris cupidatat est est sint veniam sint officia sint incididunt est
+                                        sit ut tempor commodo pariatur ut proident et do.</p>
 
-                                    <p>Sed eu in ut sint dolor irure fugiat minim veniam sed ea proident ullamco occaecat irure ut velit eu ullamco fugiat cupidatat dolore fugiat. Lorem ipsum id non deserunt id consequat duis voluptate amet aliqua pariatur laboris officia pariatur veniam velit reprehenderit sint nostrud cupidatat magna eiusmod mollit exercitation pariatur nulla minim laboris dolore aliqua consectetur cillum duis aute consectetur.</p>
+                                    <p>Sed eu in ut sint dolor irure fugiat minim veniam sed ea proident ullamco
+                                        occaecat irure ut velit eu ullamco fugiat cupidatat dolore fugiat. Lorem ipsum
+                                        id non deserunt id consequat duis voluptate amet aliqua pariatur laboris officia
+                                        pariatur veniam velit reprehenderit sint nostrud cupidatat magna eiusmod mollit
+                                        exercitation pariatur nulla minim laboris dolore aliqua consectetur cillum duis
+                                        aute consectetur.</p>
 
                                 </div>
 
@@ -131,7 +219,8 @@
                                 <ol>
                                     <li>
                                         <div class="avatar">
-                                            <img src="images/testimonial/1.jpg" alt="" ></div>
+                                            <img src="images/testimonial/1.jpg" alt="">
+                                        </div>
                                         <div class="comment-info">
                                             <span class="c_name">Merrill Rayos</span>
                                             <span class="c_date id-color">2 days ago</span>
@@ -139,18 +228,25 @@
                                             <div class="clearfix"></div>
                                         </div>
 
-                                        <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                                        <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit
+                                            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                                            quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                            explicabo.</div>
                                         <ol>
                                             <li>
                                                 <div class="avatar">
-                                                    <img src="images/testimonial/2.jpg" alt="" ></div>
+                                                    <img src="images/testimonial/2.jpg" alt="">
+                                                </div>
                                                 <div class="comment-info">
                                                     <span class="c_name">Jackqueline Sprang</span>
                                                     <span class="c_date id-color">2 days ago</span>
                                                     <span class="c_reply"><a href="#">Reply</a></span>
                                                     <div class="clearfix"></div>
                                                 </div>
-                                                <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                                <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit
+                                                    voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                                                    eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                                                    beatae vitae dicta sunt
                                                     explicabo.</div>
                                             </li>
                                         </ol>
@@ -158,25 +254,33 @@
 
                                     <li>
                                         <div class="avatar">
-                                            <img src="images/testimonial/3.jpg" alt="" ></div>
+                                            <img src="images/testimonial/3.jpg" alt="">
+                                        </div>
                                         <div class="comment-info">
                                             <span class="c_name">Sanford Crowley</span>
                                             <span class="c_date id-color">2 days ago</span>
                                             <span class="c_reply"><a href="#">Reply</a></span>
                                             <div class="clearfix"></div>
                                         </div>
-                                        <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                                        <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit
+                                            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                                            quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                            explicabo.</div>
                                         <ol>
                                             <li>
                                                 <div class="avatar">
-                                                    <img src="images/testimonial/4.jpg" alt="" ></div>
+                                                    <img src="images/testimonial/4.jpg" alt="">
+                                                </div>
                                                 <div class="comment-info">
                                                     <span class="c_name">Lyndon Pocekay</span>
                                                     <span class="c_date id-color">2 days ago</span>
                                                     <span class="c_reply"><a href="#">Reply</a></span>
                                                     <div class="clearfix"></div>
                                                 </div>
-                                                <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                                <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit
+                                                    voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                                                    eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                                                    beatae vitae dicta sunt
                                                     explicabo.</div>
                                             </li>
                                         </ol>
@@ -184,7 +288,8 @@
 
                                     <li>
                                         <div class="avatar">
-                                            <img src="images/testimonial/5.jpg" alt="" ></div>
+                                            <img src="images/testimonial/5.jpg" alt="">
+                                        </div>
                                         <div class="comment-info">
                                             <span class="c_name">Aleen Crigger</span>
                                             <span class="c_date id-color">2 days ago</span>
@@ -192,7 +297,10 @@
 
                                             <div class="clearfix"></div>
                                         </div>
-                                        <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                                        <div class="comment">Sed ut perspiciatis unde omnis iste natus error sit
+                                            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                                            quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                            explicabo.</div>
                                     </li>
                                 </ol>
 
@@ -201,23 +309,27 @@
                                 <div id="comment-form-wrapper">
                                     <h4>Leave a Comment</h4>
                                     <div class="comment_form_holder">
-                                        <form id="contact_form" name="form1" class="form-border" method="post" action="#">
+                                        <form id="contact_form" name="form1" class="form-border" method="post"
+                                            action="#">
 
                                             <label>Name</label>
-                                            <input type="text" name="name" id="name" class="form-control" >
+                                            <input type="text" name="name" id="name" class="form-control">
 
                                             <label>Email <span class="req">*</span></label>
-                                            <input type="text" name="email" id="email" class="form-control" >
+                                            <input type="text" name="email" id="email" class="form-control">
                                             <div id="error_email" class="error">Please check your email</div>
 
                                             <label>Message <span class="req">*</span></label>
-                                            <textarea cols="10" rows="10" name="message" id="message" class="form-control"></textarea>
+                                            <textarea cols="10" rows="10" name="message" id="message"
+                                                class="form-control"></textarea>
                                             <div id="error_message" class="error">Please check your message</div>
-                                            <div id="mail_success" class="success">Thank you. Your message has been sent.</div>
+                                            <div id="mail_success" class="success">Thank you. Your message has been
+                                                sent.</div>
                                             <div id="mail_failed" class="error">Error, email not sent</div>
 
                                             <p id="btnsubmit">
-                                                <input type="submit" id="send" value="Send" class="btn-main" ></p>
+                                                <input type="submit" id="send" value="Send" class="btn-main">
+                                            </p>
 
 
 
@@ -237,7 +349,9 @@
                                             <img src="images/news-thumbnail/pic-blog-1.jpg" alt="">
                                         </div>
                                         <div class="d-content">
-                                            <a href="#"><h4>How AI is Transforming Industries</h4></a>
+                                            <a href="#">
+                                                <h4>How AI is Transforming Industries</h4>
+                                            </a>
                                             <div class="d-date">January 15, 2023</div>
                                         </div>
                                     </li>
@@ -246,7 +360,9 @@
                                             <img src="images/news-thumbnail/pic-blog-2.jpg" alt="">
                                         </div>
                                         <div class="d-content">
-                                            <a href="#"><h4>How Technology is Reshaping Our Lives</h4></a>
+                                            <a href="#">
+                                                <h4>How Technology is Reshaping Our Lives</h4>
+                                            </a>
                                             <div class="d-date">January 15, 2023</div>
                                         </div>
                                     </li>
@@ -255,7 +371,9 @@
                                             <img src="images/news-thumbnail/pic-blog-3.jpg" alt="">
                                         </div>
                                         <div class="d-content">
-                                            <a href="#"><h4>Cybersecurity in the Digital Age</h4></a>
+                                            <a href="#">
+                                                <h4>Cybersecurity in the Digital Age</h4>
+                                            </a>
                                             <div class="d-date">January 15, 2023</div>
                                         </div>
                                     </li>
@@ -264,13 +382,15 @@
                                             <img src="images/news-thumbnail/pic-blog-4.jpg" alt="">
                                         </div>
                                         <div class="d-content">
-                                            <a href="#"><h4>Balancing Progress and Responsibility</h4></a>
+                                            <a href="#">
+                                                <h4>Balancing Progress and Responsibility</h4>
+                                            </a>
                                             <div class="d-date">January 15, 2023</div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div class="widget widget_tags">
                                 <h4>Popular Tags</h4>
                                 <ul>
@@ -300,18 +420,21 @@
             <div class="container">
                 <div class="row gx-5">
                     <div class="col-lg-4 col-sm-6">
-                        <img width="170" height="50" src="images/kukode-white-logo.png" alt="" >
+                        <img width="170" height="40" src="images/kukode-white-logo.png" alt="">
                         <div class="spacer-20"></div>
-                        <p>We aspire to create a digital landscape where technology seamlessly enhances productivity, connectivity, and sustainability, fostering a brighter, more efficient, and inclusive future for all.</p>
+                        <p>We aspire to create a digital landscape where technology seamlessly enhances productivity,
+                            connectivity, and sustainability, fostering a brighter, more efficient, and inclusive future
+                            for all.</p>
 
                         <div class="widget">
                             <h5>Follow Us on</h5>
                             <div class="social-icons">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-discord"></i></a>
-                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/kukodein/"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/kukodein"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://discord.com/channels/kukode"><i class="fa-brands fa-discord"></i></a>
+                                <a href="https://www.tiktok.com/@kukodein"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.youtube.com/channel/UC-sqh84XZ6TO26T_S_B2S0g"><i
+                                        class="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -320,7 +443,7 @@
                             <div class="col-lg-6 col-sm-6">
                                 <div class="widget">
                                     <h5>Company</h5>
-                                    <ul>                                        
+                                    <ul>
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="services.html">Our Services</a></li>
                                         <li><a href="study-case.html">Study Case</a></li>
@@ -368,7 +491,7 @@
                                 <img src="images/svg/map-pin-svgrepo-com-white.svg" class="" alt="">
                                 <div class="d-text">
                                     <h4>Address</h4>
-                                    100 S Main St, Los Angeles, CA
+                                    Jl. Tirta Marta 1-72, Mlati,Yogyakarta
                                 </div>
                             </div>
                         </div>
@@ -381,7 +504,7 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    Copyright 2023 - KuKode by Designesia
+                                    Copyright 2023 - Develop by KuKode
                                 </div>
                                 <ul class="menu-simple">
                                     <li><a href="#">Terms &amp; Conditions</a></li>
@@ -394,8 +517,11 @@
             </div>
         </footer>
         <!-- footer close -->
+        <a href="https://wa.me/6283148263597" class="whatsapp-button" title="Chat with us on WhatsApp">
+            <img src="images/wa-white.png" class="whatsapp-icon" alt="WhatsApp icon">
+        </a>
     </div>
-    
+
     <!-- Javascript Files
     ================================================== -->
     <script src="js/plugins.js"></script>

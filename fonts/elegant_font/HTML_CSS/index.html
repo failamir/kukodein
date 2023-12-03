@@ -88,6 +88,77 @@
 		margin: 20px 10px 0 0;
 	}
 </style>
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            /* Fixed positioning to place it relative to the viewport */
+            right: 20px;
+            /* 20px from the right */
+            bottom: 40px;
+            /* 20px from the bottom */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #25D366; */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            /* Make it round */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            /* box-shadow: 2px 2px 5px rgba(0,0,0,0.3); Optional: add some shadow for better visibility */
+            z-index: 1000;
+            /* Make sure it's above other items */
+        }
+
+        .whatsapp-icon {
+            height: 64px;
+            /* Icon size */
+            margin-right: 0px;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1001;
+            bottom: 50px;
+            right: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+
+            /* Fade in tooltip - animation */
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .whatsapp-button-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Add media query for better mobile responsiveness */
+        @media (max-width: 480px) {
+            .whatsapp-button {
+                right: 10px;
+                bottom: 10px;
+                padding: 8px;
+                font-size: 0.9em;
+                /* Smaller text on mobile */
+            }
+
+            .whatsapp-icon {
+                height: 50px;
+                /* Smaller icon on mobile */
+            }
+        }
+    </style>
 </head>
 <body>
 	<div class="w-main centered">
